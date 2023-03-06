@@ -1,0 +1,111 @@
+@use "../global/partials" as *;
+
+.main_container {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+
+  @include tablet {
+    flex-direction: column-reverse;
+  }
+
+  .side_container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    @include tablet {
+      height: 50%;
+      width: 100%;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @include mobile {
+      gap: 0.7rem;
+    }
+
+    &:nth-child(1) {
+      padding: 5rem 15rem;
+
+      @include laptop {
+        padding: 5rem 12rem;
+      }
+
+      @include hd-screen {
+        padding: 4rem 10rem;
+      }
+
+      @include tablet {
+        padding: 0 2rem;
+      }
+    }
+
+    .main_heading {
+      font-size: 5rem;
+      font-weight: bold;
+
+      @include laptop {
+        font-size: 4.5rem;
+        line-height: 6rem;
+      }
+
+      @include hd-screen {
+        font-size: 4rem;
+        line-height: 5rem;
+      }
+
+      @include tablet {
+        font-size: 3.5rem;
+        text-align: center;
+      }
+
+      @include mobile-l {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+
+      @include mobile {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+
+    .description {
+      max-width: 35vw;
+      font-size: 1.8rem;
+
+      @include laptop {
+        max-width: 50vw;
+        font-size: 1.7rem;
+      }
+
+      @include hd-screen {
+        font-size: 1.6rem;
+      }
+
+      @include tablet {
+        font-size: 1.5rem;
+        max-width: 70vw;
+        text-align: center;
+      }
+
+      @include mobile-l {
+        max-width: 90vw;
+        font-size: 1.3rem;
+      }
+
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+
+    .main_image {
+      height: 90%;
+    }
+  }
+}

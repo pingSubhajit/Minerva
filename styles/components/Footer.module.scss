@@ -1,0 +1,143 @@
+@use "/styles/global/partials" as *;
+
+.footer_container {
+  background-color: #13084b;
+  color: white;
+
+  .footer_column_container {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin: auto;
+    padding: 5rem;
+
+    @include hd-screen {
+      width: 70vw;
+    }
+
+    @include tablet {
+      width: 90vw;
+      padding: 3rem 2rem;
+    }
+
+    @include mobile-l {
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    @include mobile {
+      padding: 2rem 1rem;
+    }
+
+    .footer_column {
+      width: 20rem;
+
+      @include tablet {
+        width: unset;
+      }
+
+      .footer_column_title {
+        font-weight: bold;
+        margin-bottom: 2rem;
+
+        @include hd-screen {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
+
+      .footer_column_item_container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .footer_column_item {
+          color: white;
+          opacity: 80%;
+          cursor: pointer;
+          transition: 0.2s all ease-in-out;
+
+          @include hd-screen {
+            font-size: 1.2rem;
+          }
+
+          @include mobile {
+            font-size: 1rem;
+          }
+
+          &:hover {
+            opacity: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer_bottom_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0b0228;
+
+    @include mobile-l {
+      flex-direction: column;
+    }
+
+    .footer_bottom_side_container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 5rem;
+
+      @include tablet {
+        padding: 1.5rem 3rem;
+      }
+
+      @include mobile-l {
+        padding: 1rem 2rem;
+      }
+
+      .footer_logo {
+        height: 4rem;
+
+        @include tablet {
+          height: 2rem;
+        }
+      }
+
+      .copyright_info {
+        opacity: 80%;
+
+        @include hd-screen {
+          font-size: 1.2rem;
+        }
+
+        @include mobile-l {
+          font-size: 1rem;
+        }
+      }
+
+      .footer_bottom_link {
+        opacity: 80%;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+          opacity: 100%;
+        }
+
+        @include hd-screen {
+          font-size: 1.2rem;
+        }
+
+        @include mobile-l {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

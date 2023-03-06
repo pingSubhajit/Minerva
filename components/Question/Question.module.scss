@@ -1,0 +1,44 @@
+@use "../../styles/global/partials" as *;
+
+.question {
+  margin: 0 auto;
+  width: min-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+
+  .question__question_container {
+    padding: revert;
+    width: 50vw;
+    font-size: 1.2rem;
+
+    @include tablet {
+      width: 80vw;
+    }
+
+    * {
+      padding: revert;
+    }
+  }
+
+  .question__options_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30vw;
+
+    @include tablet {
+      width: 80vw;
+    }
+
+    button {
+      justify-content: flex-start;
+      font-size: 1rem;
+      padding: 1.5rem;
+      border-color: color(grey);
+    }
+  }
+}

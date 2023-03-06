@@ -1,0 +1,29 @@
+@use "../global/partials" as *;
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .app__next_button {
+    width: 30vw;
+    margin: 3rem auto 0 25vw;
+
+    @include tablet {
+      width: 80vw;
+      margin: 3rem auto;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .app__stats_container {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,27 @@
+@use "partials" as *;
+@use "components" as *;
+
+html {
+  //font-size: 62.5%;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-family: fontFamily(body);
+}
+
+button {
+  opacity: 1 !important;
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800;900&display=swap'); // Inter
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); // Anton
+
+/** Argentum Sans Beginning */
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url('/fonts/argentum-sans/ArgentumSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url('/fonts/argentum-sans/ArgentumSans-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url('/fonts/argentum-sans/ArgentumSans-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url('/fonts/argentum-sans/ArgentumSans-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url('/fonts/argentum-sans/ArgentumSans-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url('/fonts/argentum-sans/ArgentumSans-Black.ttf');
+  font-weight: 900;
+}
+
+/** Argentum Sans Ending */
+
+$fonts: (
+  body: 'Inter',
+  title: 'Anton'
+);
+
+@function fontFamily($font-var) {
+  @return map-get($fonts, $font-var)
+};

@@ -1,0 +1,55 @@
+@use "/styles/global/partials" as *;
+
+.navbar {
+  width: 100%;
+  padding: 2rem 5vw;
+  position: absolute;
+  top: 0;
+  z-index: 500;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.05);
+  margin-bottom: 0.5rem;
+
+  @include laptop {
+    padding: 1rem 5vw;
+  }
+
+  .navbar__logo {
+    width: 8.6rem;
+    cursor: pointer;
+
+    img {
+      all: unset !important;
+      width: 100% !important;
+    }
+  }
+
+  .navbar__links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+
+    .navbar__button {
+      cursor: pointer;
+    }
+
+    .navbar__account_button {
+      cursor: pointer;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+}
+
+.navbar__searchbox {
+  width: 92rem !important;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 0 !important;
+}

@@ -1,0 +1,69 @@
+@use "../partials" as *;
+
+.form_body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .form_title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .form_group {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .form_item {
+    overflow: visible;
+    width: 100%;
+
+    .form_input {
+      width: 99.9%;
+      margin: auto;
+      border: 1px solid #d9d9d9;
+      transition: 0.2s all ease-in-out;
+      padding: 0.5rem;
+
+      &::placeholder {
+        opacity: 70%;
+      }
+
+      &:focus {
+        border-color: #40a9ff;
+        border-right-width: 1px !important;
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+        box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+      }
+    }
+
+    .form_input_small {
+      width: 70%;
+    }
+
+    textarea {
+      resize: none;
+      height: 10rem !important;
+    }
+  }
+
+  .form_secondary_action {
+    margin-bottom: -1.5rem;
+    margin-top: 1rem;
+    color: color(primary);
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+      color: color(accent);
+    }
+  }
+
+  .form_submit_button {
+    margin-top: 1rem;
+  }
+}

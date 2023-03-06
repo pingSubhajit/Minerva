@@ -1,0 +1,17 @@
+$colors: (
+  purple: #D1A0F2,
+  primary: #38208C,
+  accent: #031936,
+  indigo: #161A59,
+  dark: #011126,
+  success: #D6F84E,
+  danger: #F62C38,
+  bg: #011126,
+  white: #FCF8FF,
+  lightgrey: #D2CFD9,
+  grey: #93989f,
+);
+
+@function color($color-var) {
+  @return map-get($colors, $color-var)
+};
